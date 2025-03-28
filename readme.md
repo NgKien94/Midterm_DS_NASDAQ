@@ -1,28 +1,30 @@
-Yêu cầu bài làm cụ thể gồm các nội dung sau:
+                Ý nghĩa của các cột trong Dataset
 
-1.Phát biểu bài toán (đặt trên đầu của file notebook):
-    Phân tích dữ liệu nhằm khảo sát tính khả thi cho việc xây dựng mô hình dự đoán biến mục tiêu (target variable) Y từ các biến/đặc trưng (predictors/features) Xi (i=1..N).
+No.: Số thứ tự của công ty trong danh sách (ví dụ: 1, 2, 3).
 
-    Nếu biến Y xác định cụ thể -> việc mô hình hóa là 1 trong 2 bài toán: phân lớp (classification) nếu Y là biến danh mục, hoặc hồi quy (regression) nếu Y là biến số (thực).
+Symbol: Mã chứng khoán của công ty, được sử dụng trên sàn giao dịch (ví dụ: AAPL, NVDA, MSFT).
 
-    Nếu biến Y không xác định cụ thể -> việc mô hình hóa là bài toán phân cụm (clustering).
-    Chú ý: Phần mô hình hóa dành cho Bài tập theo sau, KHÔNG phải là nội dung của bài thi GK.
-2.Thu thập dữ liệu: 
-    - TỰ thu thập dữ liệu (tự crawl)
-    - Số lượng mẫu: >1000 mẫu, dẫn nguồn dữ liệu và mô tả cách thức thu thập. 
-    - Số lượng biến (variable/feature): >= 5 (trừ một số ngoại lệ do nhà cung cấp nội dung cung cấp quá ít dữ liệu mô tả).
-    - Xuất ra các thống kê mô tả trực quan về dữ liệu đơn biến đối với một vài biến quan trọng để minh hoạ. 
-3.
-    Làm sạch và chuẩn hóa dữ liệu (data cleaning): mô tả cách xử lý và trực quan hoá sự thay đổi của phân bố dữ liệu trước và sau xử lý.
+Company Name: Tên đầy đủ của công ty (ví dụ: Apple Inc., NVIDIA Corporation, Microsoft Corporation).
 
-    Mã hoá dữ liệu (data encoding) cho dữ liệu danh mục (category) hoặc vector hoá dữ liệu text dùng công cụ xử lý ngôn ngữ tự nhiên (vd: NLTK toolkit).
-4.Xây dựng và lựa chọn đặc trưng (feature engineering) (tham khảo: https://phamdinhkhanh.github.io/2019/01/07/Ky_thuat_feature_engineering.html)
+Market Cap: Vốn hóa thị trường, là tổng giá trị thị trường của tất cả cổ phiếu đang lưu hành của công ty, tính bằng tỷ USD (B - billion).
 
-5.Trực quan hoá mối quan hệ đa biến (bằng scatter plot, correlation map, distribution plot, lmplot, clustermap,…) để trả lời xem có thể có mối quan hệ tiềm ẩn nào đó giữa các biến trong tập dữ liệu hay ko, hoặc trực quan hoá không gian dữ liệu nhiều chiều (bằng t-SNE,..) để trả lời xem liệu có quan sát được tính chất cụm của tập dữ liệu đầu vào hay ko (https://www.datacamp.com/tutorial/introduction-t-sne).
+Stock Price: Giá cổ phiếu hiện tại của công ty, tính bằng USD.
 
-6.Kết luận (đặt ở cuối của file notebook)::
-    Bài toán đặt ra có khả thi (về dữ liệu) hay không. Vì sao?
-    Nếu khả thi thì tập các đặc trưng hữu ích có thể dùng để xây dựng mô hình là gì?
+% Change: Phần trăm thay đổi giá cổ phiếu so với phiên giao dịch trước, thể hiện mức tăng hoặc giảm giá (dương là tăng, âm là giảm).
 
-7.Tài liệu tham khảo:
-    Liệt kê các nguồn tham khảo ý tưởng, mã nguồn,… tại đây
+Revenue: Doanh thu của công ty, là tổng số tiền thu được từ hoạt động kinh doanh, tính bằng tỷ USD (B - billion).
+
+Volume: Khối lượng giao dịch, là số lượng cổ phiếu được mua bán trong một khoảng thời gian nhất định (thường là một ngày giao dịch).
+
+Industry: Ngành công nghiệp mà công ty hoạt động (ví dụ: Consumer Electronics, Semiconductors, Software - Infrastructure).
+
+Sector: Lĩnh vực kinh tế mà công ty thuộc về (ở đây đều là Technology - Công nghệ).
+
+Net Income: Thu nhập ròng, là lợi nhuận của công ty sau khi trừ tất cả chi phí và thuế, tính bằng tỷ USD (B - billion).
+
+FCF: Dòng tiền tự do (Free Cash Flow), là số tiền công ty có thể sử dụng sau khi chi trả cho các hoạt động kinh doanh và đầu tư, tính bằng tỷ USD (B - billion).
+
+Net Cash: Tiền mặt ròng, là tổng tiền mặt và các khoản tương đương tiền sau khi trừ đi các khoản nợ, tính bằng tỷ USD (B - billion). Giá trị âm nghĩa là công ty có nợ lớn hơn tiền mặt.
+
+Rev. Growth: Tăng trưởng doanh thu, là phần trăm tăng trưởng doanh thu so với kỳ trước
+
